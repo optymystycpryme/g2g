@@ -1,0 +1,27 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-primary.fixed-top
+  .container
+    = link_to "Navbar", root_path, class: "navbar-brand"
+    %button.navbar-toggler{ type: "button", "data-toggle" => :collapse, "data-target" => "#navbarSupportedContent", "aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation"}
+      %span.navbar-toggler-icon
+
+    .collapse.navbar-collapse#navbarSupportedContent
+      %ul.nav.navbar-nav.mr-auto.nav-pills.nav-fill
+        %li.nav-item.active
+          = link_to "Home", root_path, class: "nav-link"
+
+        %li.nav-item
+          = link_to "Nav Link Two", "#", class: "nav-link"
+
+        - if user_signed_in?
+          %li.nav-item.dropdown
+            %a.nav-link.dropdown-toggle#navbarDropdown{href: "#", role: "button", "data-toggle" => "dropdown", "aria-haspopup" => "true", "aria-expanded" => "false" }
+              Dropdown
+            .dropdown-menu{ "aria-labelledby" => "navbarDropdown" }
+              %a.dropdown-item{href: "#" }Account
+              = link_to "Edit Profile", edit_user_registration_path, class: "dropdown-item"
+              %a.dropdown-item{href: "#" }Friendly Gatherers
+              .dropdown-divider
+              = link_to 'Log out', destroy_user_session_path, method: :delete, class: "dropdown-item"
+        - else
+          %li.nav-item
+          = link_to "Nav Link Two", "#", class: "nav-link"

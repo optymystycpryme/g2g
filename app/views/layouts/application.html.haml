@@ -1,0 +1,15 @@
+!!! 5
+%html
+  %head
+    %title Good2Gather
+    = stylesheet_link_tag "application", :media => "all", 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag "application", 'data-turbolinks-track': 'reload'
+    = csrf_meta_tags
+  %body
+    %p.notice
+      = notice
+    %p.alert
+      = alert
+    = render 'layouts/header'
+    .container
+      = yield

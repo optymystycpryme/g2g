@@ -1,0 +1,4 @@
+- @events.each do |event|
+  %h2= link_to event.event_name, event
+  %p= time_ago_in_words(event.created_at)
+  %p= event.body

@@ -1,0 +1,21 @@
+$light-color: #ffffff;
+$main-color: #007bff;
+$dark-color: #000000;
+$box-shadow: 0 4px 8px 4px rgba($dark-color, 0.2);
+
+.code {
+  font-size: 55px;
+}
+
+.navbar {
+  box-shadow: $box-shadow;
+  a {
+    color: $light-color !important;
+  }
+  .dropdown-menu {
+    box-shadow: $box-shadow;
+  }
+  .dropdown-item {
+    color: $main-color !important;
+  }
+}

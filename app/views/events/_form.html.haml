@@ -1,0 +1,5 @@
+= simple_form_for @event do |f|
+  = f.input :event_name
+  = f.rich_text_area :body
+  %br
+  = f.button :submit, class: "btn btn-md btn-primary"
