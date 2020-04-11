@@ -1,6 +1,16 @@
-%h1= @event.title
-%p= @event.body
+%div{class: "col-lg-5"}
+  %h1= @event.title
+  %p= @event.body
+  %br/
+  - @event.comments.each do |comment|
+    %span #{comment.user.username} says:
+    %hr/
+    %p #{comment.content}
+    %p #{comment.created_at}
+  %br/
+  %h2 Comment
+  = render 'comment_form'
 
-= link_to 'Upcoming Events', events_path
-= link_to 'Update Event', edit_event_path(@event)
-= link_to 'Cancel Event', event_path(@event), method: :delete, data: { confirm: "Are you sure?" }
+  = link_to 'Upcoming Events', events_path
+  = link_to 'Update Event', edit_event_path(@event)
+  = link_to 'Cancel Event', event_path(@event), method: :delete, data: { confirm: "Are you sure?" }

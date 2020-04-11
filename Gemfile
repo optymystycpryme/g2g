@@ -71,5 +71,4 @@ gem 'better_errors', '~> 2.6'
 
 # Console tools
 gem 'hirb', '~> 0.7.3'
-gem 'irbtools', require: 'irbtools/binding'
 gem 'pry', '~> 0.12.2'
