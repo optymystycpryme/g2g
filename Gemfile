@@ -67,7 +67,7 @@ gem 'haml', '~> 5.1'
 gem 'simple_form', '~> 5.0'
 
 # Better errors? Maybe not! We'll see...
-gem 'better_errors', '~> 2.6'
+gem 'better_errors', '~> 2.8'
 
 # Console tools
 gem 'hirb', '~> 0.7.3'
